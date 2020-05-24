@@ -4,13 +4,13 @@ const hbs = require("hbs")
 
 const geocode = require("./utils/geocode")
 const forecast = require("./utils/forecast")
-
+/**/ 
 const app = express()
-
-const server_dir = express.static(path.join(__dirname,'..','/public'))
+/**/
+const server_dir = /**/express.static(path.join(__dirname,'..','/public'))
 const views_dir = path.join(__dirname,"../temps/views")
 const partials_dir = path.join(__dirname,"../temps/partials")
-
+/**/
 app.use(server_dir)
 
 app.set("view engine","hbs")
@@ -19,7 +19,8 @@ hbs.registerPartials(partials_dir)
 
 app.get('',(req,res)=>{
     res.render("index",{
-        title:"Weather"
+        title:"Weather",
+        name:"KAMAL"
     })
 })
 app.get("/about",(req,res)=>{
