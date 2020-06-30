@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html><head>
         <link rel="stylesheet" href="styles/SimpleStyle.css">
-        <script src="/js/ClientSideJS.js"></script>
+        
     </head>
 
     <body>
         <div class="main-content">
             {{>header}}
+            <p> you can use this page  to get your weather forecast</p>
+            <form>
+                <input placeholder="location to get forecast">
+                <button>search</button>
+            </form>
+            <p id="forecast">select the place and your forecast will appear here</p>
         </div>
         
 
         {{>footer}}
-    
+    <script src="/js/ClientSideJS.js"></script>
 </body></html>

@@ -76,7 +76,6 @@ const forecast_callback = (error,body,res,address,location)=>{
         errormsg ="bad request , error message : "+body.error
          res.send({errormsg})
     }else{
-        console.log()
         forcast = body.daily.summary+" It's currently "+ body.currently.temperature +" and there is "
         + body.currently.precipProbability +" chance to rain"
         res.send({
