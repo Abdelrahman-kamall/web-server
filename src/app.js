@@ -11,6 +11,8 @@ const server_dir = /**/express.static(path.join(__dirname,'..','/public'))
 const views_dir = path.join(__dirname,"../temps/views")
 const partials_dir = path.join(__dirname,"../temps/partials")
 /**/
+
+const port = process.env.PORT || 3000
 app.use(server_dir)
 
 app.set("view engine","hbs")
@@ -63,8 +65,8 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen('3000',()=>{
-    console.log('started yasta')
+app.listen(port,()=>{
+    console.log('started yasta from ' + port)
 })
 
 

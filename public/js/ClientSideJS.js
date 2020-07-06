@@ -11,7 +11,7 @@ weatherForm.addEventListener("submit", (event)=>{
     console.log("location submitted")
     address = locationInput.value
     console.log(address)
-    const url = 'http://localhost:3000/weather?address=' + address
+    const url = '/weather?address=' + address
 fetch(url).then(
     response =>{
         response.json().then(data=>{
@@ -27,3 +27,4 @@ fetch(url).then(
 )
 })
 
+//just to test some thing about git 
